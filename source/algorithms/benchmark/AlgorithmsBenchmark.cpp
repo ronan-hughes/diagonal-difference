@@ -1,5 +1,5 @@
 #include <benchmark/benchmark.h>
-#include "DiagonalDifference.h"
+#include "Algorithms.h"
 
 static void BM_DiagonalDifference(benchmark::State& state) {
     std::vector<std::vector<int>> vec;

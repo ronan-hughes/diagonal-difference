@@ -1,4 +1,4 @@
-#include "DiagonalDifference.h"
+#include "Algorithms.h"
 
 int diagonalDifference(std::vector<std::vector<int>> arr) {
 

@@ -1,1 +1,1 @@
-add_subdirectory(diagonal-difference)
+add_subdirectory(algorithms)
