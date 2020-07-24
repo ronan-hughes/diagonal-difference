@@ -1,4 +1,5 @@
 #include "Algorithms.h"
+#include <algorithm>
 
 int diagonalDifference(std::vector<std::vector<int>> arr) {
 
@@ -12,4 +13,15 @@ int diagonalDifference(std::vector<std::vector<int>> arr) {
     }
 
     return abs(mainDiag - otherDiag);
+}
+
+std::vector<double> plusMinus(std::vector<int> arr) {
+    std::vector<double> res;
+    res.reserve(3);
+
+    res.push_back(std::count_if(arr.begin(), arr.end(), [](int n){return n>0;}) / (double)arr.size());
+    res.push_back(std::count_if(arr.begin(), arr.end(), [](int n){return n<0;}) / (double)arr.size());
+    res.push_back(std::count_if(arr.begin(), arr.end(), [](int n){return n==0;}) / (double)arr.size());
+
+    return res;
 }

@@ -12,4 +12,13 @@ static void BM_DiagonalDifference(benchmark::State& state) {
     }
 }
 
+static void BM_PlusMinus(benchmark::State& state) {
+    std::vector<int> vec({1, -3, 4, 0, 3, -2});
+
+    for (auto _ : state) {
+        plusMinus(vec);
+    }
+}
+
 BENCHMARK(BM_DiagonalDifference);
+BENCHMARK(BM_PlusMinus);
