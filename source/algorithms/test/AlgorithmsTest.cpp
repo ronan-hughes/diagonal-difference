@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "Algorithms.h"
+#include "Math.h"
 
 TEST(AlgorithmsTest, diagonal_difference) {
     std::vector<std::vector<int>> vec;
