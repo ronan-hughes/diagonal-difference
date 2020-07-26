@@ -20,5 +20,30 @@ static void BM_PlusMinus(benchmark::State& state) {
     }
 }
 
+static void MB_BirthdayCakeCandles(benchmark::State& state) {
+    std::vector<int> vec(1000000);
+    std::generate(vec.begin(), vec.end(), []() {
+        return rand() % 100;
+    });
+
+    for (auto _ : state) {
+        birthdayCakeCandles(vec);
+    }
+}
+
+static void MB_BirthdayCakeCandlesSTL(benchmark::State& state) {
+    std::vector<int> vec(1000000);
+    std::generate(vec.begin(), vec.end(), []() {
+        return rand() % 100;
+    });
+
+    for (auto _ : state) {
+        birthdayCakeCandlesSTL(vec);
+    }
+}
+
+
 BENCHMARK(BM_DiagonalDifference);
 BENCHMARK(BM_PlusMinus);
+BENCHMARK(MB_BirthdayCakeCandles);
+BENCHMARK(MB_BirthdayCakeCandlesSTL);

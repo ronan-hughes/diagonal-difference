@@ -54,3 +54,26 @@ std::tuple<unsigned int, unsigned int> miniMaxSum(std::vector<unsigned int>& vec
 
     return std::make_tuple(min, max);
 }
+
+/* O(N) */
+int birthdayCakeCandles(const std::vector<int>& vec) {
+
+    int max = 0, count = 0;
+
+    for( const auto& i : vec) {
+        if( i == max) {
+            count++;
+        }
+        if( i > max) {
+            max = i;
+            count = 1;
+        }
+    }
+    return count;
+}
+
+/* O(N) for both operations */
+int birthdayCakeCandlesSTL(const std::vector<int>& vec) {
+    const auto& max = std::max_element(vec.begin(), vec.end());
+    return std::count_if(vec.begin(), vec.end(), [max](int i){ return i == *max;});
+}

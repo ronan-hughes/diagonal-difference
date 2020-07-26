@@ -35,3 +35,13 @@ TEST(AlgorithmsTest, mini_max_sum) {
     EXPECT_EQ(std::get<0>(res), 2063136757);
     EXPECT_EQ(std::get<1>(res), 2744467344);
 }
+
+TEST(AlgorithmsTest, birthday_candles) {
+
+    std::vector<int> vec({3, 2, 1, 3});
+
+    auto res = birthdayCakeCandlesSTL(vec);
+
+    EXPECT_EQ(birthdayCakeCandlesSTL(vec), 2);
+    EXPECT_EQ(birthdayCakeCandles(vec), 2);
+}
