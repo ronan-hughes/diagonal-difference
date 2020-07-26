@@ -1,8 +1,9 @@
 #include "Algorithms.h"
 #include <algorithm>
 #include <iostream>
+#include <numeric>
 
-int diagonalDifference(std::vector<std::vector<int>> arr) {
+int diagonalDifference(const std::vector<std::vector<int>>& arr) {
 
     int mainDiag = 0, otherDiag = 0;
 
@@ -16,7 +17,7 @@ int diagonalDifference(std::vector<std::vector<int>> arr) {
     return abs(mainDiag - otherDiag);
 }
 
-std::vector<double> plusMinus(std::vector<int> arr) {
+std::vector<double> plusMinus(const std::vector<int>& arr) {
     std::vector<double> res;
     res.reserve(3);
 
@@ -40,4 +41,16 @@ int stairs(int n) {
         std::cout << std::endl;
     }
     return 1;
+}
+
+std::tuple<unsigned int, unsigned int> miniMaxSum(std::vector<unsigned int>& vec) {
+
+    std::tuple<unsigned int, unsigned int> ret;
+
+    std::sort(vec.begin(), vec.end());
+
+    unsigned int min = std::accumulate(vec.begin(), vec.begin()+4, 0);
+    unsigned int max = std::accumulate(vec.begin()+1, vec.end(), 0);
+
+    return std::make_tuple(min, max);
 }

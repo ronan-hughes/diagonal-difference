@@ -3,8 +3,9 @@
 
 #include <vector>
 
-int diagonalDifference(std::vector<std::vector<int>> arr);
-std::vector<double> plusMinus(std::vector<int> arr);
+int diagonalDifference(const std::vector<std::vector<int>>& arr);
+std::vector<double> plusMinus(const std::vector<int>& arr);
 int stairs(int n);
+std::tuple<unsigned int, unsigned int> miniMaxSum(std::vector<unsigned int>& vec);
 
 #endif //ALGORITHMS_H

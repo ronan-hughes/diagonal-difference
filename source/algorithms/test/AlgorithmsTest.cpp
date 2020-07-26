@@ -25,3 +25,13 @@ TEST(AlgorithmsTest, plus_minus) {
 TEST(AlgorithmsTest, stairs) {
     EXPECT_EQ(stairs(6), 1);
 }
+
+TEST(AlgorithmsTest, mini_max_sum) {
+
+    std::vector<unsigned int> vec({256741038, 623958417, 467905213, 714532089, 938071625});
+
+    auto res = miniMaxSum(vec);
+
+    EXPECT_EQ(std::get<0>(res), 2063136757);
+    EXPECT_EQ(std::get<1>(res), 2744467344);
+}
