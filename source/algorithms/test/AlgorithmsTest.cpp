@@ -21,3 +21,7 @@ TEST(AlgorithmsTest, plus_minus) {
     EXPECT_NEAR(results.at(1), 0.33333, 0.00001);
     EXPECT_NEAR(results.at(2), 0.16666, 0.00001);
 }
+
+TEST(AlgorithmsTest, stairs) {
+    EXPECT_EQ(stairs(6), 1);
+}
