@@ -1,4 +1,4 @@
-set(SOURCE_FILES src/Algorithms.cpp)
+set(SOURCE_FILES src/Math.cpp)
 include_directories(src)
 
 add_library(math STATIC ${SOURCE_FILES})
