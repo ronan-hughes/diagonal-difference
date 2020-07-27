@@ -77,3 +77,23 @@ int birthdayCakeCandlesSTL(const std::vector<int>& vec) {
     const auto& max = std::max_element(vec.begin(), vec.end());
     return std::count_if(vec.begin(), vec.end(), [max](int i){ return i == *max;});
 }
+
+std::string timeConversion(const std::string& s) {
+    short hour = std::stoi(s.substr(0, 2));
+
+    bool am = !s.substr(s.length()-2).compare("AM");
+
+    if( am && hour == 12)
+        return std::string("00").append(s.substr(2, 6));
+
+    if( am )
+        return s.substr(0, s.length()-2);
+
+    if( !am && hour == 12 )
+        return s.substr(0, s.length()-2);
+
+    hour += 12;
+
+    return std::to_string(hour).append(s.substr(2, 6));
+
+}

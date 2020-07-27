@@ -45,3 +45,10 @@ TEST(AlgorithmsTest, birthday_candles) {
     EXPECT_EQ(birthdayCakeCandlesSTL(vec), 2);
     EXPECT_EQ(birthdayCakeCandles(vec), 2);
 }
+
+TEST(AlgorithmsTest, time_conversion) {
+    EXPECT_EQ(timeConversion("07:05:45AM"), "07:05:45");
+    EXPECT_EQ(timeConversion("07:05:45PM"), "19:05:45");
+    EXPECT_EQ(timeConversion("12:40:22AM"), "00:40:22");
+    EXPECT_EQ(timeConversion("12:40:22PM"), "12:40:22");
+}
