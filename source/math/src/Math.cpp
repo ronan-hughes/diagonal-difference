@@ -63,3 +63,7 @@ int connectingTowns(int n, std::vector<int> routes) {
     }
     return res;
 }
+
+unsigned long long cuttingSquares(int n, int m) {
+    return ((unsigned long long)n * m) - 1;
+}
