@@ -54,3 +54,12 @@ int maxPrimeFactors(unsigned long long n) {
     }
     return count;
 }
+
+int connectingTowns(int n, std::vector<int> routes) {
+    int res = 1;
+    for ( auto i : routes) {
+        res *= i;
+        res %= 1234567;
+    }
+    return res;
+}
