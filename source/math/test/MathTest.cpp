@@ -36,3 +36,8 @@ TEST(MathTest, connecting_towns) {
 TEST(MathTest, cutting_squares) {
     EXPECT_EQ(cuttingSquares(689715240, 759842301), 524074814996367239);
 }
+
+TEST(MathTest, n_series_sum) {
+    EXPECT_EQ(nSeriesSum(2), 4);
+    EXPECT_EQ(nSeriesSum(229137999), 218194447);
+}

@@ -67,3 +67,18 @@ int connectingTowns(int n, std::vector<int> routes) {
 unsigned long long cuttingSquares(int n, int m) {
     return ((unsigned long long)n * m) - 1;
 }
+
+/* (ab)%n = ((a%n)*(b%n))%n */
+int nSeriesSum(long i) {
+
+    int prev_square = 0;
+    int series = 0;
+
+    for( long j=1; j<=i; ++j) {
+        int curr_square = ((j%1000000007)*(j%1000000007))%1000000007;
+        series += (curr_square - prev_square);
+        prev_square = curr_square;
+    }
+    return series;
+
+}
